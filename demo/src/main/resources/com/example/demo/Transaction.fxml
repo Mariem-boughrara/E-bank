@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="508.0" prefWidth="897.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TransactionController">
+    <children>
+        <ImageView fitHeight="558.0" fitWidth="918.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/blur-background-1-300x169.jpg" />
+            </image>
+        </ImageView>
+        <VBox layoutX="17.0" layoutY="115.0" prefHeight="230.0" prefWidth="117.0" spacing="14.0">
+            <children>
+                <Label prefHeight="28.0" prefWidth="198.0" text="Id transaction" textFill="#316b83">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="28.0" prefWidth="198.0" text="Date" textFill="#316b83">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="28.0" prefWidth="198.0" text="Type" textFill="#316b83">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="28.0" prefWidth="198.0" text="Id compte" textFill="#316b83">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="28.0" prefWidth="198.0" text="Somme" textFill="#316b83">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <TextField fx:id="tid" layoutX="129.0" layoutY="118.0" prefHeight="26.0" prefWidth="217.0" />
+        <TextField fx:id="td" layoutX="129.0" layoutY="158.0" prefHeight="26.0" prefWidth="218.0" />
+        <ComboBox fx:id="tty" layoutX="129.0" layoutY="199.0" onAction="#select" prefHeight="26.0" prefWidth="218.0" />
+        <TextField fx:id="tidc" layoutX="129.0" layoutY="241.0" prefHeight="26.0" prefWidth="218.0" />
+        <TextField fx:id="tsom" layoutX="129.0" layoutY="285.0" prefHeight="26.0" prefWidth="218.0" />
+        <Button fx:id="btnvalider" layoutX="51.0" layoutY="384.0" mnemonicParsing="false" onAction="#HandleOnActionval" onMouseClicked="#clictv" prefHeight="28.0" prefWidth="140.0" style="-fx-background-color: transparent; -fx-border-color: #716F81;" text="Valider" textFill="#316b83" />
+        <Label fx:id="lbl" layoutX="50.0" layoutY="338.0" prefHeight="35.0" prefWidth="346.0" textFill="#e26a2c">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tvtr" layoutX="362.0" layoutY="59.0" onMouseClicked="#clictv" prefHeight="363.0" prefWidth="422.0">
+            <columns>
+                <TableColumn fx:id="colid" prefWidth="93.5999755859375" text="Idtransaction" />
+                <TableColumn fx:id="cold" prefWidth="69.5999755859375" text="Date" />
+                <TableColumn fx:id="colt" prefWidth="73.5999755859375" text="Type" />
+                <TableColumn fx:id="colidc" prefWidth="76.00006103515625" text="IdCompte" />
+                <TableColumn fx:id="cols" prefWidth="109.60009765625" text="Somme" />
+            </columns>
+        </TableView>
+        <Button fx:id="idlogout" layoutX="50.0" layoutY="423.0" mnemonicParsing="false" onAction="#logout" onMouseClicked="#clictv" prefHeight="26.0" prefWidth="140.0" style="-fx-background-color: transparent; -fx-border-color: #716F81;" text="Se déconnecter" textFill="#316b83" />
+        <Label fx:id="idl" layoutX="38.0" prefHeight="79.0" prefWidth="399.0" text="Les transactions  " textAlignment="CENTER" textFill="#e59934">
+            <font>
+                <Font name="DecoType Thuluth" size="33.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
